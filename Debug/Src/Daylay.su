@@ -1,0 +1,3 @@
+../Src/Daylay.c:3:6:TIM6_Config	4	static
+../Src/Daylay.c:26:6:Delay_us	16	static
+../Src/Daylay.c:39:6:Delay_ms	24	static
