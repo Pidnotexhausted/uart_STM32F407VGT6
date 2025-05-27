@@ -106,6 +106,18 @@ void USART2_sendString(const char* string){
 	}
 }
 
+uint8_t USART2_getChar(void){
+	/*
+	 * step to followed
+	 * 1. wait for RNEX bit to set. This indicates data has been received and can be read
+	 * 2. read the data from DR register, this clears RNEX bit also.
+	 */
+	uint8_t data;
+	while(!(USART2->SR & (1<<5))){}
+	data = USART2->DR;
+	return data
+}
+
 int main(void)
 {
 	SysClockConfig();
