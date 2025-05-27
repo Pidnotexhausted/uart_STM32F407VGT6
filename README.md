@@ -15,3 +15,6 @@ Use usart2 (PA2 and PA3)
 - Write a function to send 8bits:
   + write a char to DR register
   + wait for TC bit in SR register set (transmission completed)
+- Write a function to receive data:
+  + wait for RXNE bit to be set. This indicates data has been received and can be read
+  + read DR (this clears RXNE bit also)
