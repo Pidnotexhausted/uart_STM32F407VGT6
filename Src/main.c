@@ -115,7 +115,7 @@ uint8_t USART2_getChar(void){
 	uint8_t data;
 	while(!(USART2->SR & (1<<5))){}
 	data = USART2->DR;
-	return data
+	return data;
 }
 
 int main(void)
